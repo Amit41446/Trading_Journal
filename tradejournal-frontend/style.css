@@ -1,0 +1,208 @@
+/* ======================= GLOBAL RESET ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ======================= HOME PAGE ======================= */
+body.home {
+  display: none; /* hide initially to prevent flash */
+  background: #f8f9fa;
+  color: #333;
+  min-height: 100vh;
+}
+
+body.home .navbar {
+  background: #1e3a8a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+body.home .navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+body.home .navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+body.home .navbar button {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.home .container {
+  padding: 20px;
+}
+
+body.home .summary {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+body.home .card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+body.home table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+body.home table th,
+body.home table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+body.home .profit {
+  color: green;
+}
+
+body.home .loss {
+  color: red;
+}
+
+body.home form {
+  display: flex;
+  gap: 10px;
+}
+
+body.home form input,
+body.home form select,
+body.home form button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* ======================= LOGIN PAGE ======================= */
+body.login {
+  display: none; /* hide initially to prevent flash */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+body.login .login-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+body.login .login-container h2 {
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+body.login .login-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+body.login .login-container input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+  outline: none;
+}
+
+body.login .login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #667eea;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+body.login .login-container button:hover {
+  background-color: #5563d6;
+}
+
+body.login #error {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+}
+
+/* ======================= RESPONSIVE ======================= */
+@media (max-width: 400px) {
+  body.login .login-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  body.home .summary {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ======================= Setting ======================= */
+body.home .settings {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+body.home .settings button {
+  padding: 10px 15px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+body.home .settings button:first-child {
+  background-color: #ff4d4d; /* Logout red */
+  color: #fff;
+}
+
+body.home .settings button:last-child {
+  background-color: #667eea; /* Reset blue */
+  color: #fff;
+}
+
+body.home .settings button:hover {
+  opacity: 0.9;
+}

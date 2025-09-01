@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trade Journal & Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>📊 TradeJournal</h1>
+    <ul>
+  <li><a href="index.html">Dashboard</a></li>
+  <li><a href="#">Journal</a></li>
+  <li><a href="settings.html" onclick="showSection('settings')">Settings</a></li>
+</ul>
+  </ul>
+</nav>
+
+    </ul>
+  </nav>
+
+  <main class="container">
+
+    <!-- Summary Cards -->
+    <section class="summary">
+      <div class="card">Daily P&L <h2 id="dailyPL">+₹0</h2></div>
+      <div class="card">Invested <h2 id="invested">₹0</h2></div>
+      <div class="card">Net P&L <h2 id="netPL">+₹0</h2></div>
+      <div class="card">Win Rate <h2 id="winRate">0%</h2></div>
+    </section>
+
+    <!-- Recent Trades -->
+    <section class="recent-trades">
+      <h2>Recent Trades</h2>
+      <table id="tradeTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Symbol</th>
+            <th>Type</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>P&L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Populated dynamically by script.js -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Add Trade Form -->
+    <section class="add-trade">
+      <h2>Add Trade</h2>
+      <form id="tradeForm">
+        <input type="text" id="symbol" placeholder="Symbol" required>
+        <select id="type">
+          <option value="BUY">BUY</option>
+          <option value="SELL">SELL</option>
+        </select>
+        <input type="number" id="quantity" placeholder="Quantity" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
